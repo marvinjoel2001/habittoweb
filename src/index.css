@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-background-dark text-white font-display;
+    @apply bg-white text-slate-900 font-display;
     position: relative;
     min-height: 100vh;
   }
@@ -12,10 +12,11 @@
 
 /* Glassmorphism styles */
 .glassmorphism {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Aurora background */
@@ -39,7 +40,7 @@
 
 /* CTA gradient with hover */
 .cta-gradient {
-  background-image: linear-gradient(to right, #EC4A7E, #9C55CC);
+  background-image: linear-gradient(to right, #ec4a7e, #9c55cc);
   transition: all 0.3s ease-in-out;
 }
 

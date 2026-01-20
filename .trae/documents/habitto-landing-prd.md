@@ -31,7 +31,7 @@ La landing page de Habitto consiste en las siguientes secciones principales:
 | Features Section | Feature Card 3 | Roomies Seguros con icono verified_user |
 | Footer | Store Badges | Botones de descarga para App Store y Google Play |
 | Footer | Social Links | Iconos de Instagram, Facebook y LinkedIn |
-| Footer | Copyright | Texto "© 2024 Habitto. All rights reserved." |
+| Footer | Copyright | Texto "© 2026 Habitto. All rights reserved." |
 
 ## 3. Core Process
 **Flujo del Usuario:**

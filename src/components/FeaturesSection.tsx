@@ -1,11 +1,11 @@
-import React from 'react';
-import { Sparkles, Banknote, ShieldCheck } from 'lucide-react';
+import React from "react";
+import { Sparkles, Banknote, ShieldCheck } from "lucide-react";
 
 export default function FeaturesSection() {
   return (
     <div className="flex flex-col gap-10 px-4 py-10 animate-fade-in-up animate-delay-300">
-      <h3 className="text-white text-3xl md:text-4xl font-bold leading-tight text-center max-w-2xl mx-auto">
-        Todo lo que necesitas, en un solo lugar.
+      <h3 className="text-slate-900 text-3xl md:text-4xl font-bold leading-tight text-center max-w-2xl mx-auto">
+        Alquilar nunca fue tan fácil y seguro.
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Card 1 */}
@@ -14,8 +14,11 @@ export default function FeaturesSection() {
             <Sparkles size={32} strokeWidth={1.5} />
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="text-white text-lg font-bold">Matching Inteligente</h4>
-            <p className="text-gray-300 text-sm font-normal">Nuestro algoritmo te conecta con tu piso y roomie ideal.</p>
+            <h4 className="text-slate-900 text-lg font-bold">Match Perfecto</h4>
+            <p className="text-slate-600 text-sm font-normal">
+              Algoritmo inteligente que te conecta con inquilinos o propiedades
+              compatibles.
+            </p>
           </div>
         </div>
 
@@ -25,8 +28,10 @@ export default function FeaturesSection() {
             <Banknote size={32} strokeWidth={1.5} />
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="text-white text-lg font-bold">Sin Comisiones</h4>
-            <p className="text-gray-300 text-sm font-normal">Ahorra dinero. Conecta directamente con propietarios.</p>
+            <h4 className="text-slate-900 text-lg font-bold">Sin Comisiones</h4>
+            <p className="text-slate-600 text-sm font-normal">
+              Ahorra dinero. Conecta directamente con propietarios.
+            </p>
           </div>
         </div>
 
@@ -36,8 +41,12 @@ export default function FeaturesSection() {
             <ShieldCheck size={32} strokeWidth={1.5} />
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="text-white text-lg font-bold">Roomies Seguros</h4>
-            <p className="text-gray-300 text-sm font-normal">Perfiles verificados para tu tranquilidad.</p>
+            <h4 className="text-slate-900 text-lg font-bold">
+              Roomies Seguros
+            </h4>
+            <p className="text-slate-600 text-sm font-normal">
+              Perfiles verificados para tu tranquilidad.
+            </p>
           </div>
         </div>
       </div>
