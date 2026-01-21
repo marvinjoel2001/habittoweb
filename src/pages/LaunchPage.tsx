@@ -38,13 +38,20 @@ export default function LaunchPage() {
           </div>
         </div>
 
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-900 tracking-tight">
-          La Revolución del Alquiler
+        <div className="flex justify-center mb-6">
+          <span className="inline-block px-6 py-2 rounded-full bg-pink-100 text-pink-600 font-bold text-lg md:text-xl tracking-wide shadow-sm">
+            Prepárate para encontrarlo
+          </span>
+        </div>
+
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight max-w-4xl mx-auto leading-tight">
+          Tu próximo hogar no se busca, <br className="hidden md:block" />
+          se hace match.
         </h1>
 
-        <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-2xl mx-auto">
-          Tu próximo hogar está a un 'match' de distancia. Prepárate para
-          alquilar sin intermediarios, sin papeleos y sin estrés.
+        <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
+          Encuentra casas, departamentos y personas con quien compartir tu
+          espacio.
         </p>
 
         {timeLeft ? (

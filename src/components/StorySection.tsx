@@ -1,14 +1,17 @@
 import React from "react";
+import historyImg from "../assets/Images/history.png";
 
 export default function StorySection() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="glassmorphism p-8 rounded-3xl md:order-2">
-          <div className="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl h-64 md:h-96 w-full flex items-center justify-center">
-            <span className="text-slate-400 font-medium">
-              Imagen de Historia/Equipo
-            </span>
+          <div className="rounded-2xl overflow-hidden h-64 md:h-96 w-full flex items-center justify-center">
+            <img
+              src={historyImg}
+              alt="Nuestra Historia"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
