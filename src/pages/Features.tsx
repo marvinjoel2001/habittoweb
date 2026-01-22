@@ -1,4 +1,5 @@
 import React from "react";
+import { Sparkles } from "lucide-react";
 
 export default function Features() {
   return (
@@ -18,20 +19,14 @@ export default function Features() {
           {/* Card 1 */}
           <div className="flex flex-col gap-3 rounded-xl glassmorphism p-6 hover:scale-[1.02] transition-transform duration-300">
             <div className="text-action bg-action/20 p-3 rounded-full w-fit">
-              <span
-                className="material-symbols-outlined !text-4xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                bolt
-              </span>
+              <Sparkles size={36} strokeWidth={1.5} />
             </div>
             <div className="flex flex-col gap-1">
               <h2 className="text-slate-900 text-lg font-bold leading-tight">
-                Matching Ultra-Rápido
+                IA & Match Inteligente
               </h2>
               <p className="text-slate-600 text-sm font-normal leading-normal">
-                Encuentra compañeros de piso compatibles en minutos, no en
-                semanas, con nuestro algoritmo avanzado.
+                Encuentra compañeros de piso compatibles en minutos gracias a nuestro algoritmo de IA avanzado.
               </p>
             </div>
           </div>

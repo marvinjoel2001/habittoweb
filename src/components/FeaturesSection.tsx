@@ -1,5 +1,5 @@
 import React from "react";
-import { Brain, Banknote, ShieldCheck } from "lucide-react";
+import { Sparkles, Banknote, ShieldCheck } from "lucide-react";
 
 export default function FeaturesSection() {
   return (
@@ -11,7 +11,7 @@ export default function FeaturesSection() {
         {/* Card 1 */}
         <div className="flex flex-1 gap-4 rounded-xl glassmorphism p-6 flex-col text-center items-center hover:scale-105 transition-transform duration-300">
           <div className="text-secondary bg-secondary/20 p-3 rounded-full">
-            <Brain size={32} strokeWidth={1.5} />
+            <Sparkles size={32} strokeWidth={1.5} />
           </div>
           <div className="flex flex-col gap-1">
             <h4 className="text-slate-900 text-lg font-bold">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Sparkles } from "lucide-react";
 
 export default function HowItWorks() {
   return (
@@ -45,20 +46,14 @@ export default function HowItWorks() {
             <div className="flex size-12 items-center justify-center rounded-full bg-primary/20 text-primary text-xl font-bold">
               2
             </div>
-            <span
-              className="material-symbols-outlined text-action"
-              style={{ fontSize: "32px" }}
-            >
-              swipe
-            </span>
+            <Sparkles size={32} strokeWidth={1.5} className="text-action" />
           </div>
           <div className="flex flex-col gap-1">
             <h2 className="text-lg font-bold leading-tight text-slate-900">
-              Desliza y Conecta
+              Match con IA
             </h2>
             <p className="text-sm font-normal leading-normal text-slate-600">
-              Usa nuestro sistema de deslizar (swipe) para indicar interés en
-              propiedades o inquilinos.
+              Nuestra IA te sugiere los mejores perfiles. Desliza para indicar interés y conectar.
             </p>
           </div>
         </div>
