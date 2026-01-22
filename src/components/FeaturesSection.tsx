@@ -14,10 +14,9 @@ export default function FeaturesSection() {
             <Sparkles size={32} strokeWidth={1.5} />
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="text-slate-900 text-lg font-bold">Match Perfecto</h4>
+            <h4 className="text-slate-900 text-lg font-bold">IA & Match Avanzado</h4>
             <p className="text-slate-600 text-sm font-normal">
-              Algoritmo inteligente que te conecta con inquilinos o propiedades
-              compatibles.
+              Nuestra IA analiza tus preferencias para encontrar tu hogar ideal o el roomie perfecto.
             </p>
           </div>
         </div>

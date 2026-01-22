@@ -40,6 +40,21 @@ export default function StorySection() {
               hogar te está esperando, solo tienes que deslizar.
             </p>
           </div>
+
+          <div className="mt-8 pt-6 border-t border-slate-200">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">
+              Contáctanos
+            </h3>
+            <div className="space-y-2 text-slate-600">
+              <p className="flex items-center gap-2">
+                <span className="font-semibold">Teléfono:</span> 71363268
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="font-semibold">Correo:</span>{" "}
+                marvinjoel@gmail.com
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

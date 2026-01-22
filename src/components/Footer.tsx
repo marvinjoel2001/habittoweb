@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Github } from "lucide-react";
 import appStoreImg from "../assets/Images/appstore.png";
 import playStoreImg from "../assets/Images/playstore.png";
 import logoImg from "../assets/Images/logo.png";
@@ -36,21 +36,35 @@ export default function Footer() {
       <div className="flex justify-center gap-6">
         <a
           className="text-slate-500 hover:text-slate-900 transition hover:scale-110"
-          href="#"
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Instagram size={24} />
         </a>
         <a
           className="text-slate-500 hover:text-slate-900 transition hover:scale-110"
-          href="#"
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Facebook size={24} />
         </a>
         <a
           className="text-slate-500 hover:text-slate-900 transition hover:scale-110"
-          href="#"
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Linkedin size={24} />
+        </a>
+        <a
+          className="text-slate-500 hover:text-slate-900 transition hover:scale-110"
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github size={24} />
         </a>
       </div>
       <p className="text-slate-500 text-sm font-normal">
