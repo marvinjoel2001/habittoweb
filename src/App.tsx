@@ -7,14 +7,28 @@ import Features from "./pages/Features";
 import HowItWorks from "./pages/HowItWorks";
 import Contact from "./pages/Contact";
 import LaunchPage from "./pages/LaunchPage";
+import bgVideo from "./assets/video/escena1.mp4";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/10 blur-[120px]"></div>
-        <div className="absolute top-[40%] left-[40%] w-[30%] h-[30%] rounded-full bg-action/10 blur-[120px] translate-x-[-50%] translate-y-[-50%]"></div>
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          src={bgVideo}
+        />
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+        
+        {/* Ambient blobs - keeping them but reducing opacity slightly */}
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] mix-blend-multiply"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/20 blur-[120px] mix-blend-multiply"></div>
+        <div className="absolute top-[40%] left-[40%] w-[30%] h-[30%] rounded-full bg-action/20 blur-[120px] translate-x-[-50%] translate-y-[-50%] mix-blend-multiply"></div>
       </div>
       <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-transparent">
         <div className="flex h-full grow flex-col">
