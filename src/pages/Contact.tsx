@@ -86,9 +86,9 @@ export default function Contact() {
                 <p className="font-bold text-slate-900">Correo</p>
                 <a
                   className="text-slate-600 hover:text-primary transition-colors"
-                  href="mailto:marvinjoel@gmail.com"
+                  href="mailto:soporte@habitto.com"
                 >
-                  marvinjoel@gmail.com
+                  soporte@habitto.com
                 </a>
               </div>
             </div>
@@ -100,9 +100,9 @@ export default function Contact() {
                 <p className="font-bold text-slate-900">Teléfono</p>
                 <a
                   className="text-slate-600 hover:text-primary transition-colors"
-                  href="tel:71363268"
+                  href="tel:+15551234567"
                 >
-                  71363268
+                  +1 (555) 123-4567
                 </a>
               </div>
             </div>

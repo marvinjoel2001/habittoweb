@@ -10,16 +10,13 @@ export default function FeaturesSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Card 1 */}
         <div className="flex flex-1 gap-4 rounded-xl glassmorphism p-6 flex-col text-center items-center hover:scale-105 transition-transform duration-300">
-          <div className="text-secondary bg-secondary/20 p-3 rounded-full">
+          <div className="text-action bg-action/20 p-3 rounded-full">
             <Sparkles size={32} strokeWidth={1.5} />
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="text-slate-900 text-lg font-bold">
-              IA & Match Avanzado
-            </h4>
+            <h4 className="text-slate-900 text-lg font-bold">IA & Match Avanzado</h4>
             <p className="text-slate-600 text-sm font-normal">
-              Nuestra IA analiza tus preferencias para encontrar tu hogar ideal
-              o el roomie perfecto.
+              Nuestra IA analiza tus preferencias para encontrar tu hogar ideal o el roomie perfecto.
             </p>
           </div>
         </div>

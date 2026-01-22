@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import portadaImg from "../assets/Images/portada.png";
 import appStoreImg from "../assets/Images/appstore.png";
 import playStoreImg from "../assets/Images/playstore.png";
-import portadaImg from "../assets/Images/portada.png";
 
 export default function HeroSection() {
   return (
     <div className="py-10 md:py-20 animate-fade-in-up px-4 flex flex-col items-center gap-10">
-      {/* Text Content Section */}
-      <div className="text-center max-w-4xl flex flex-col items-center gap-8 z-10 glassmorphism p-8 md:p-12 rounded-[2rem]">
+      {/* Text Content Section - Moved Outside for Better Visibility */}
+      <div className="text-center max-w-4xl flex flex-col items-center gap-8 z-10">
         <div className="flex flex-col gap-4">
           <h1 className="text-slate-900 text-4xl md:text-6xl font-black leading-tight tracking-tighter drop-shadow-sm">
             Haz Match con tu Nuevo Hogar.
@@ -44,7 +44,7 @@ export default function HeroSection() {
       </div>
 
       {/* Image Section - Clean with Soft Edges */}
-      <div className="w-full max-w-7xl mt-8 px-4 z-10">
+      <div className="w-full max-w-7xl mt-8 px-4">
         <img
           src={portadaImg}
           alt="Habitto portada"
