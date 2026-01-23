@@ -30,7 +30,7 @@ export default function LaunchPage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh] w-full px-4">
+    <div className="flex flex-col items-center justify-center min-h-[80vh] w-full px-4 pt-24 pb-12">
       <div className="glassmorphism p-10 md:p-16 rounded-3xl max-w-4xl w-full text-center animate-fade-in-up">
         <div className="flex justify-center mb-8">
           <div className="size-20 bg-primary/10 rounded-full flex items-center justify-center text-primary">
