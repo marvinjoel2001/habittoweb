@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Twitter, Github, Linkedin, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Twitter, Github, Linkedin, Loader2, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -188,13 +188,24 @@ export default function Contact() {
               <div className="flex size-12 items-center justify-center rounded-lg bg-action/20 text-action">
                 <Phone size={24} />
               </div>
-              <div>
-                <p className="font-bold text-slate-900">Teléfono</p>
+              <div className="flex flex-col gap-2">
+                <div>
+                  <p className="font-bold text-slate-900">Teléfono</p>
+                  <a
+                    className="text-slate-600 hover:text-primary transition-colors"
+                    href="tel:+59161533565"
+                  >
+                    +591 61533565
+                  </a>
+                </div>
                 <a
-                  className="text-slate-600 hover:text-primary transition-colors"
-                  href="tel:+59161533565"
+                  href="https://wa.me/59161533565"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 w-fit shadow-md"
                 >
-                  +591 61533565
+                  <MessageCircle size={18} />
+                  Contactar por WhatsApp
                 </a>
               </div>
             </div>
