@@ -1,7 +1,62 @@
-import React from "react";
-import { Mail, Phone, MapPin, Twitter, Github, Linkedin } from "lucide-react";
+import React, { useState } from "react";
+import { Mail, Phone, MapPin, Twitter, Github, Linkedin, Loader2 } from "lucide-react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("idle");
+
+    try {
+      const response = await fetch(
+        "https://web-production-67a04a.up.railway.app/api/contact/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({
+          full_name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex flex-col flex-1 items-center py-12 lg:py-20 animate-fade-in-up">
       <div className="mx-auto max-w-3xl text-center mb-12">
@@ -20,13 +75,17 @@ export default function Contact() {
           <h2 className="text-slate-900 text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6">
             Envía un Mensaje
           </h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <label className="flex flex-col">
                 <p className="text-slate-900 text-base font-medium leading-normal pb-2">
                   Nombre Completo
                 </p>
                 <input
+                  name="full_name"
+                  value={formData.full_name}
+                  onChange={handleChange}
+                  required
                   className="flex w-full flex-1 rounded-lg border border-slate-200 bg-white p-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-primary outline-none transition-colors"
                   placeholder="Ingresa tu nombre completo"
                   type="text"
@@ -37,6 +96,10 @@ export default function Contact() {
                   Correo Electrónico
                 </p>
                 <input
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="flex w-full flex-1 rounded-lg border border-slate-200 bg-white p-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-primary outline-none transition-colors"
                   placeholder="Ingresa tu correo electrónico"
                   type="email"
@@ -48,6 +111,10 @@ export default function Contact() {
                 Asunto
               </p>
               <input
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
                 className="flex w-full flex-1 rounded-lg border border-slate-200 bg-white p-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-primary outline-none transition-colors"
                 placeholder="Ingresa el asunto de tu mensaje"
                 type="text"
@@ -58,16 +125,41 @@ export default function Contact() {
                 Tu Mensaje
               </p>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 className="w-full flex-1 rounded-lg border border-slate-200 bg-white p-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-primary outline-none transition-colors"
                 placeholder="Escribe tu mensaje aquí..."
                 rows={5}
               ></textarea>
             </label>
+
+            {status === "success" && (
+              <div className="p-4 rounded-lg bg-green-100 text-green-700 text-sm font-medium">
+                ¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.
+              </div>
+            )}
+
+            {status === "error" && (
+              <div className="p-4 rounded-lg bg-red-100 text-red-700 text-sm font-medium">
+                Hubo un error al enviar el mensaje. Por favor intenta de nuevo.
+              </div>
+            )}
+
             <button
-              className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-action text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-opacity-90 shadow-lg hover:scale-[1.02] transform duration-200"
+              disabled={loading}
+              className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-action text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-opacity-90 shadow-lg hover:scale-[1.02] transform duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
               type="submit"
             >
-              <span className="truncate">Enviar Mensaje</span>
+              {loading ? (
+                <>
+                  <Loader2 className="animate-spin mr-2" size={20} />
+                  Enviando...
+                </>
+              ) : (
+                <span className="truncate">Enviar Mensaje</span>
+              )}
             </button>
           </form>
         </div>
@@ -100,9 +192,9 @@ export default function Contact() {
                 <p className="font-bold text-slate-900">Teléfono</p>
                 <a
                   className="text-slate-600 hover:text-primary transition-colors"
-                  href="tel:+15551234567"
+                  href="tel:+59161533565"
                 >
-                  +1 (555) 123-4567
+                  +591 61533565
                 </a>
               </div>
             </div>
