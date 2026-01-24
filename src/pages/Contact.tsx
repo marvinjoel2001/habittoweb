@@ -205,7 +205,7 @@ export default function Contact() {
               <div>
                 <p className="font-bold text-slate-900">Oficina</p>
                 <p className="text-slate-600">
-                  Av. Futuro 123, Ciudad Innovación, 45678
+                  4to Anillo, Santa Cruz de la Sierra
                 </p>
               </div>
             </div>
